@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photos | WhoosLizi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="photos.css">
+</head>
+<body>
+    <div id="intro-sequence" class="intro-overlay">
+        <img id="intro-img" src="" alt="">
+    </div>
+
+    <nav class="site-header">
+        <div class="header-container">
+            <a href="../" class="logo">@whooslizi</a>
+            <div class="nav-links">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="index.html" class="nav-link" style="color: var(--color-pink); border-bottom: 2px solid var(--color-pink);">Photos</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="gallery-container">
+        <div class="gallery-row row-top">
+            <div class="photo-card aspect-tall"><img src="../src/image1.JPG" alt="Photo 1" onerror="this.src='https://placehold.co/400x600/1a1a24/ffffff?text=image1.JPG'"></div>
+            <div class="photo-card aspect-square"><img src="../src/image2.JPG" alt="Photo 2" onerror="this.src='https://placehold.co/500x500/1a1a24/ffffff?text=image2.JPG'"></div>
+            <div class="photo-card aspect-tall"><img src="../src/image3.jpg" alt="Photo 3" onerror="this.src='https://placehold.co/400x600/1a1a24/ffffff?text=image3.jpg'"></div>
+            <div class="photo-card aspect-wide"><img src="../src/image4.jpg" alt="Photo 4" onerror="this.src='https://placehold.co/600x400/1a1a24/ffffff?text=image4.jpg'"></div>
+            <div class="photo-card aspect-square"><img src="../src/image5.jpg" alt="Photo 5" onerror="this.src='https://placehold.co/500x500/1a1a24/ffffff?text=image5.jpg'"></div>
+        </div>
+
+        <div class="gallery-row row-middle">
+            <div class="photo-card aspect-landscape"><img src="../src/image6.jpg" alt="Photo 6" onerror="this.src='https://placehold.co/600x400/1a1a24/ffffff?text=image6.jpg'"></div>
+            
+            <div class="gallery-center-text">
+                <h2>Some stuff I took.</h2>
+                <button class="replay-btn" onclick="playIntro()">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+                    replay
+                </button>
+            </div>
+
+            <div class="photo-card aspect-landscape"><img src="../src/image7.jpg" alt="Photo 7" onerror="this.src='https://placehold.co/600x400/1a1a24/ffffff?text=image7.jpg'"></div>
+        </div>
+
+        <div class="gallery-row row-bottom">
+            <div class="photo-card aspect-square"><img src="../src/image8.jpg" alt="Photo 8" onerror="this.src='https://placehold.co/500x500/1a1a24/ffffff?text=image8.jpg'"></div>
+            <div class="photo-card aspect-tall"><img src="../src/image9.jpg" alt="Photo 9" onerror="this.src='https://placehold.co/400x600/1a1a24/ffffff?text=image9.jpg'"></div>
+            <div class="photo-card aspect-square"><img src="../src/image10.jpg" alt="Photo 10" onerror="this.src='https://placehold.co/500x500/1a1a24/ffffff?text=image10.jpg'"></div>
+            <div class="photo-card aspect-wide"><img src="../src/image11.jpg" alt="Photo 11" onerror="this.src='https://placehold.co/600x400/1a1a24/ffffff?text=image11.jpg'"></div>
+        </div>
+    </div>
+    
+
+    <div id="lightbox" class="lightbox">
+        <div class="viewfinder-ui">
+            <div class="vf-corner top-left"></div>
+            <div class="vf-corner top-right"></div>
+            <div class="vf-corner bottom-left"></div>
+            <div class="vf-corner bottom-right"></div>
+            <div class="vf-center-cross"></div>
+            
+            <button class="nav-btn prev-btn" onclick="navLightbox(-1)">&#10094;</button>
+            <img id="lightbox-img" class="lightbox-img" src="" alt="Viewfinder Image">
+            <button class="nav-btn next-btn" onclick="navLightbox(1)">&#10095;</button>
+            <button class="close-btn" onclick="closeLightbox()">&#10005;</button>
+        </div>
+    </div>
+
+    <script src="photos.js"></script>
+</body>
+</html>
